@@ -1,0 +1,24 @@
+import java.util.*;
+class Solution {
+    public String convertToBase7(int num) {
+        String a="",b="";
+        int r=0,i=0;
+        int n=num;
+        if(num==0){
+            return "0";
+        }
+        if(num<0){
+            a=a+"-";
+            num=num*-1;
+        }
+        while(num>0){
+            r=num%7;
+            num=num/7;
+            b=b+r;
+        }
+        for( i=b.length()-1;i>=0;i--){
+            a=a+b.charAt(i);
+        }
+        return a;
+    }
+}
