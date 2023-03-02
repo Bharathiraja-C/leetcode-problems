@@ -1,0 +1,15 @@
+class Solution {
+    public boolean isPerfectSquare(int num) {
+        int i=1,sum=1;
+        if(num==1){
+            return true;
+        }
+        while(i<num){
+            if(num==(i*i)){
+                return true;
+            }
+            i++;
+        }
+        return false;
+    }
+}
