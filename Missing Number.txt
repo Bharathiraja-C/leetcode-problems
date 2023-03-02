@@ -1,0 +1,16 @@
+import java.util.Arrays;
+class Solution {
+    public int missingNumber(int[] nums) {
+        int n=nums.length;
+        Arrays.sort(nums);
+        int i=0,j=0;
+        while(i<n){
+            if(nums[j]!=i){
+                return i;
+            }
+            i++;
+            j++;
+        }
+        return i;
+    }
+}
