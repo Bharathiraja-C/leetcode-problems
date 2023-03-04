@@ -1,0 +1,16 @@
+class Solution {
+    public int arrangeCoins(int n) {
+     int c=0,i=1;
+     while(n>0){
+         n=n-i;
+         i++;
+         c++;
+         if(n==0){
+             return c;
+         }
+     }
+     c--;
+      return c;
+    }
+
+}
