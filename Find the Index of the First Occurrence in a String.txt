@@ -1,0 +1,15 @@
+class Solution {
+    public int strStr(String haystack, String needle) {
+        int i=0,j=needle.length();
+        String s="";
+        while(j<=haystack.length()){
+            s=haystack.substring(i,j);
+            if(s.equals(needle)){
+                return i;
+            }
+            i++;
+            j++;
+        }
+        return -1;
+    }
+}
